@@ -1,0 +1,190 @@
+.education-backdrop {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: #096dd9 #0b1a33;
+  scrollbar-width: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .education-backdrop {
+    scrollbar-color: auto;
+  }
+}
+
+.education-backdrop::-webkit-scrollbar{
+  width: 4px;
+}
+
+.education-backdrop::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.education-backdrop::-webkit-scrollbar-track {
+  background: #0b1a33;
+}
+
+.education-backdrop::-webkit-scrollbar-thumb {
+  background: #096dd9;
+  border-radius: 10px;
+}
+
+.education-sheet-view {
+  min-height: 680px;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.78fr);
+  align-items: start;
+  gap: 2rem;
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
+  scrollbar-color: #096dd9 #0b1a33;
+  scrollbar-width: auto;
+}
+
+.education-degree-card {
+  position: relative;
+  padding: 2.5rem;
+  border: 1px solid rgba(201, 224, 252, 0.55);
+  background: rgba(9, 28, 48, 0.3);
+}
+
+.education-status {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.4rem 0.65rem;
+  border: 2px solid #ff7138;
+  color: #ff7138;
+  font: 0.78rem/1 "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 0.12em;
+  transform: rotate(-8deg);
+}
+
+.education-degree-card h2 {
+  max-width: 700px;
+  margin: 0 7rem 1.2rem 0;
+  color: #edf4ff;
+  font: 700 clamp(1.7rem, 2.7vw, 2.6rem)/1.2 system-ui, sans-serif;
+}
+
+.education-period {
+  margin: 0 0 1rem;
+  color: #83b4f0;
+  font: 0.9rem/1.5 "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 0.16em;
+}
+
+.education-summary {
+  margin: 0 0 1.25rem;
+  color: #ff7138;
+  font: 600 1.2rem/1.5 system-ui, sans-serif;
+}
+
+.education-progress {
+  height: 3px;
+  margin-bottom: 1.5rem;
+  background: rgba(144, 178, 221, 0.45);
+}
+
+.education-progress span {
+  display: block;
+  width: 15%;
+  height: 100%;
+  background: #ff7138;
+}
+
+.education-courses-heading {
+  margin: 0 0 1rem;
+  color: #83b4f0;
+  font: 0.78rem/1.5 "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 0.16em;
+}
+
+.education-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education-courses li {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(144, 178, 221, 0.72);
+  color: #dceaff;
+  font: 0.85rem/1.3 "SFMono-Regular", Consolas, monospace;
+}
+
+.education-details {
+  margin: 0;
+  border: 1px solid rgba(201, 224, 252, 0.65);
+  background: rgba(9, 28, 48, 0.28);
+}
+
+.education-detail {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.35rem 1.5rem;
+}
+
+.education-detail + .education-detail {
+  border-top: 1px solid rgba(201, 224, 252, 0.48);
+}
+
+.education-detail dt {
+  color: #83b4f0;
+  font: 0.78rem/1.4 "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 0.15em;
+}
+
+.education-detail dd {
+  margin: 0;
+  color: #edf4ff;
+  font: 1.1rem/1.4 system-ui, sans-serif;
+}
+
+@media (max-width: 900px) {
+  .education-content {
+    grid-template-columns: 1fr;
+    height: 520px;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-degree-card {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .education-status {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    transform: rotate(-4deg);
+  }
+
+  .education-degree-card h2 {
+    margin-right: 0;
+    font-size: 1.65rem;
+  }
+
+  .education-summary {
+    font-size: 1rem;
+  }
+
+  .education-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .education-detail {
+    padding: 1rem;
+  }
+}

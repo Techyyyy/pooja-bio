@@ -1,0 +1,168 @@
+.experience-backdrop {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: #096dd9 #0b1a33;
+  scrollbar-width: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+@supports selector(::-webkit-scrollbar) {
+  .experience-backdrop {
+    scrollbar-color: auto;
+  }
+}
+
+.experience-backdrop::-webkit-scrollbar {
+  width: 4px;
+}
+
+.experience-backdrop::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.experience-backdrop::-webkit-scrollbar-track {
+  background: #0b1a33;
+}
+
+.experience-backdrop::-webkit-scrollbar-thumb {
+  background: #096dd9;
+  border-radius: 10px;
+}
+
+.experience-sheet-view {
+  min-height: 600px;
+}
+.experience-client{
+  font-size: 20px;
+  color: #ff7138;
+  font-family: 'sans-serif';
+}
+.experience-content {
+  height: 350px;
+  padding: 2.5rem;
+  overflow-y: scroll;
+  scrollbar-color: #096dd9 #0b1a33;
+  scrollbar-width: auto;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .experience-content {
+    scrollbar-color: auto;
+  }
+}
+
+.experience-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.experience-content::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.experience-content::-webkit-scrollbar-track {
+  background: #0b1a33;
+}
+
+.experience-content::-webkit-scrollbar-thumb {
+  background: #096dd9;
+  border-radius: 10px;
+}
+
+
+
+.experience-intro {
+  margin: 0 0 2rem;
+  color: #e7f1ff;
+  font: 500 clamp(1.5rem, 2.4vw, 2.4rem)/1.35 system-ui, sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.experience-timeline {
+  display: grid;
+  gap: 2rem;
+}
+
+.experience-entry {
+  padding: 2rem;
+  border: 1px solid rgba(201, 224, 252, 0.5);
+  background: rgba(9, 28, 48, 0.25);
+}
+
+.experience-period {
+  margin: 0.4rem 0 0.75rem;
+  color: #ff7138;
+  font: 1rem/1.5 "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 0.12em;
+}
+
+.experience-entry-content h2 {
+  margin: 0;
+  color: #edf4ff;
+  font: 700 clamp(1.3rem, 1.8vw, 1.8rem)/1.3 system-ui, sans-serif;
+}
+
+.experience-entry-content h2 span {
+  color: #83b4f0;
+  font-weight: 400;
+}
+
+.experience-highlights {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.85rem 0 1.25rem;
+  padding-left: 1.35rem;
+  color: #c5d8f3;
+  font: 1rem/1.5 system-ui, sans-serif;
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-skills li {
+  padding: 0.5rem 0.7rem;
+  border: 1px dashed rgba(144, 178, 221, 0.75);
+  color: #dceaff;
+  font: 0.85rem/1.3 "SFMono-Regular", Consolas, monospace;
+}
+
+.about-nav-button:hover,
+.about-nav-button:focus-visible {
+  border-color: #ff7a3d;
+  color: #ffb087;
+  outline: none;
+}
+
+@media (max-width: 960px) {
+  .experience-content {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .experience-entry {
+    padding: 1.1rem;
+  }
+
+  .experience-period {
+    font-size: 0.8rem;
+  }
+
+  .experience-highlights {
+    font-size: 0.9rem;
+  }
+}
